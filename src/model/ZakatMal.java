@@ -5,12 +5,7 @@
  */
 package model;
 
-/**
- *
- * @author jepe
- */
 
-//Representasi Data
 public class ZakatMal {
     /**
      * Zakat Maal Object

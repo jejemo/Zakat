@@ -8,37 +8,29 @@ package ui;
 import controller.ZakatController;
 import model.ZakatMal;
 
-/**
- *
- * @author jepe
- */
+
 public class Zakat extends javax.swing.JFrame {
 
     private ZakatController mController;
     private ZakatMal mZakat;
     
-    /**
-     * Creates new form Zakat
-     */
     public Zakat() {
         initComponents();
-        //instance class objek agar class tersebut bisa digunakan/dipanggil di sini
+        
         mController = new ZakatController(this);
         mZakat = new ZakatMal();
     }
     
     public void tampilZakatMal(ZakatMal mZakat){
-        //menampilkan total harta dan total harta yang dizakatkan
         txtJumlahHarta.setText("Rp. " + mZakat.getOutputZmal1());
-        txtJumlahHartaZakat.setText("" + mZakat.getOutputZmal2());
+        txtJumlahHartaZakat.setText("Rp. " + mZakat.getOutputZmal2());
     }
     
     public void tampilBayarZakat(ZakatMal mZakat){
-        //menampilkan nisab zakat apakah bayar Zakat atau tidak
-        txtNisabZakat.setText("" + mZakat.getOutputNmal1());
+        txtNisabZakat.setText("Rp. " + mZakat.getOutputNmal1());
         txtBayarZakat.setText("" + mZakat.getOutputNmal2());
-        txtZakatPertahun.setText("" + mZakat.getOutputNmal3());
-        txtZakatPerbulan.setText("" + mZakat.getOutputNmal4());
+        txtZakatPertahun.setText("Rp. " + mZakat.getOutputNmal3());
+        txtZakatPerbulan.setText("Rp. " + mZakat.getOutputNmal4());
     }
 
     /**
@@ -69,27 +61,45 @@ public class Zakat extends javax.swing.JFrame {
         txtInputZmal10 = new javax.swing.JTextField();
         btnHitung = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(null);
+        setPreferredSize(new java.awt.Dimension(570, 548));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtJumlahHarta.setText("jLabel1");
-        getContentPane().add(txtJumlahHarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
+        txtJumlahHarta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        getContentPane().add(txtJumlahHarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, -1, -1));
 
-        txtJumlahHartaZakat.setText("jLabel1");
-        getContentPane().add(txtJumlahHartaZakat, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 272, -1, -1));
+        txtJumlahHartaZakat.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        getContentPane().add(txtJumlahHartaZakat, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, -1, -1));
 
-        txtNisabZakat.setText("jLabel2");
-        getContentPane().add(txtNisabZakat, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 297, -1, -1));
+        txtNisabZakat.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        getContentPane().add(txtNisabZakat, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
 
-        txtBayarZakat.setText("Ya");
-        getContentPane().add(txtBayarZakat, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 322, -1, -1));
+        txtBayarZakat.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        getContentPane().add(txtBayarZakat, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, -1, -1));
 
-        txtZakatPertahun.setText("jLabel4");
-        getContentPane().add(txtZakatPertahun, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 347, -1, -1));
+        txtZakatPertahun.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        getContentPane().add(txtZakatPertahun, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, -1, -1));
 
-        txtZakatPerbulan.setText("jLabel5");
-        getContentPane().add(txtZakatPerbulan, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 372, -1, -1));
+        txtZakatPerbulan.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        getContentPane().add(txtZakatPerbulan, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, -1, -1));
 
         txtInputZmal1.setText("0");
         txtInputZmal1.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +107,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal1ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 171, -1));
+        getContentPane().add(txtInputZmal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 171, -1));
 
         txtInputZmal2.setText("0");
         txtInputZmal2.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +115,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal2ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 171, -1));
+        getContentPane().add(txtInputZmal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 171, -1));
 
         txtInputZmal3.setText("0");
         txtInputZmal3.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +123,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal3ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 171, -1));
+        getContentPane().add(txtInputZmal3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 171, -1));
 
         txtInputZmal4.setText("0");
         txtInputZmal4.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +131,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal4ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 171, -1));
+        getContentPane().add(txtInputZmal4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 171, -1));
 
         txtInputZmal5.setText("0");
         txtInputZmal5.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +139,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal5ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, 171, -1));
+        getContentPane().add(txtInputZmal5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 171, -1));
 
         txtInputZmal6.setText("0");
         txtInputZmal6.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +147,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal6ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 171, -1));
+        getContentPane().add(txtInputZmal6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 171, -1));
 
         txtInputZmal7.setText("0");
         txtInputZmal7.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +155,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal7ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 171, -1));
+        getContentPane().add(txtInputZmal7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 171, -1));
 
         txtInputZmal8.setText("0");
         txtInputZmal8.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +163,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal8ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 171, -1));
+        getContentPane().add(txtInputZmal8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 171, -1));
 
         txtInputZmal9.setText("0");
         txtInputZmal9.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +171,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal9ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal9, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 171, -1));
+        getContentPane().add(txtInputZmal9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 171, -1));
 
         txtInputNmal1.setText("0");
         txtInputNmal1.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +179,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputNmal1ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputNmal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 171, -1));
+        getContentPane().add(txtInputNmal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 171, -1));
 
         txtInputZmal10.setText("0");
         txtInputZmal10.addActionListener(new java.awt.event.ActionListener() {
@@ -177,7 +187,7 @@ public class Zakat extends javax.swing.JFrame {
                 txtInputZmal10ActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInputZmal10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 171, -1));
+        getContentPane().add(txtInputZmal10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 171, -1));
 
         btnHitung.setText("Hitung");
         btnHitung.addActionListener(new java.awt.event.ActionListener() {
@@ -185,10 +195,64 @@ public class Zakat extends javax.swing.JFrame {
                 btnHitungActionPerformed(evt);
             }
         });
-        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
+        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 170, -1));
 
-        jLabel1.setText("Bayar Zakat?");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("Jumlah Harta Yang Dihitung Zakatnya");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
+
+        jLabel2.setText("Harta dalam bentuk Tabungan/ Giro/ Deposito");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel3.setText("Harta dalam bentuk Logam Mulia (Emas/ Perak)");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+
+        jLabel4.setText("Harta dalam bentuk Surat Beharga 2)");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        jLabel5.setText("Harta dalam bentuk Properti 3)");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+
+        jLabel6.setText("Harta dalam bentuk Kendaraan 4)");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+
+        jLabel7.setText("Harta dalam bentuk Koleksi Seni & Barang Antik 5)");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        jLabel8.setText("Harta dalam bentuk Stok Barang Dagangan");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        jLabel9.setText("Harta dalam bentuk Piutang Lancar");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        jLabel10.setText("Hutang Jatuh Tempo Saat Membayar Kewajiban Zakat");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel11.setText("Jumlah Harta");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
+
+        jLabel12.setText("Harga Emas saat ini (dalam gram)");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel13.setText("Besarnya Nisab Zakat Maal per Tahun");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel14.setText("Apakah Saya Wajib Membayar Zakat Maal ?");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setText("Jumlah yang Saya Harus Dibayarkan per Tahun");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel16.setText("Jumlah Bila Saya Bayarkan per Bulan");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, -1));
+
+        jLabel17.setText("Harta dalam bentuk Lainnya");
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -238,7 +302,6 @@ public class Zakat extends javax.swing.JFrame {
     }//GEN-LAST:event_txtInputZmal10ActionPerformed
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
-        //get data from edit text
         mZakat.setInputZmal1(Double.parseDouble(txtInputZmal1.getText()));
         mZakat.setInputZmal2(Double.parseDouble(txtInputZmal2.getText()));
         mZakat.setInputZmal3(Double.parseDouble(txtInputZmal3.getText()));
@@ -251,7 +314,6 @@ public class Zakat extends javax.swing.JFrame {
         mZakat.setInputZmal10(Double.parseDouble(txtInputZmal10.getText()));
         mZakat.setInputNmal1(Double.parseDouble(txtInputNmal1.getText()));
         
-        //memanggil fungsi hitung jumlah harta dan zakat dengan mengirimkan data berupa model
         mController.hitungJumlahHarta(mZakat);
     }//GEN-LAST:event_btnHitungActionPerformed
 
@@ -293,6 +355,22 @@ public class Zakat extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHitung;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel txtBayarZakat;
     private javax.swing.JTextField txtInputNmal1;
     private javax.swing.JTextField txtInputZmal1;
