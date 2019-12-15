@@ -17,49 +17,29 @@ public class Zakat extends javax.swing.JFrame {
     private ZakatController mController;
     private ZakatMal mZakat;
     
-    private double hartaSetelahZakat;
-    private double nisabZakat;
     /**
      * Creates new form Zakat
      */
     public Zakat() {
         initComponents();
-        
+        //instance class objek agar class tersebut bisa digunakan/dipanggil di sini
         mController = new ZakatController(this);
         mZakat = new ZakatMal();
     }
     
     public void tampilZakatMal(ZakatMal mZakat){
+        //menampilkan total harta dan total harta yang dizakatkan
         txtJumlahHarta.setText("Rp. " + mZakat.getOutputZmal1());
         txtJumlahHartaZakat.setText("" + mZakat.getOutputZmal2());
     }
     
     public void tampilBayarZakat(ZakatMal mZakat){
+        //menampilkan nisab zakat apakah bayar Zakat atau tidak
         txtNisabZakat.setText("" + mZakat.getOutputNmal1());
         txtBayarZakat.setText("" + mZakat.getOutputNmal2());
         txtZakatPertahun.setText("" + mZakat.getOutputNmal3());
         txtZakatPerbulan.setText("" + mZakat.getOutputNmal4());
     }
-    
-    public void setData(){
-        
-        mZakat.setInputZmal1(10000);
-        mZakat.setInputZmal2(10000);
-        mZakat.setInputZmal3(10000);
-        mZakat.setInputZmal4(10000);
-        mZakat.setInputZmal5(10000);
-        mZakat.setInputZmal6(10000);
-        mZakat.setInputZmal7(10000);
-        mZakat.setInputZmal8(10000);
-        mZakat.setInputZmal9(10000);
-        
-        mZakat.setInputZmal10(50000);
-        
-        mZakat.setInputNmal1(750000);
-        
-        mController.hitungJumlahHarta(mZakat);
-    }
-   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -94,7 +74,7 @@ public class Zakat extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtJumlahHarta.setText("jLabel1");
-        getContentPane().add(txtJumlahHarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 247, -1, -1));
+        getContentPane().add(txtJumlahHarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
 
         txtJumlahHartaZakat.setText("jLabel1");
         getContentPane().add(txtJumlahHartaZakat, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 272, -1, -1));
@@ -258,6 +238,7 @@ public class Zakat extends javax.swing.JFrame {
     }//GEN-LAST:event_txtInputZmal10ActionPerformed
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
+        //get data from edit text
         mZakat.setInputZmal1(Double.parseDouble(txtInputZmal1.getText()));
         mZakat.setInputZmal2(Double.parseDouble(txtInputZmal2.getText()));
         mZakat.setInputZmal3(Double.parseDouble(txtInputZmal3.getText()));
@@ -270,6 +251,7 @@ public class Zakat extends javax.swing.JFrame {
         mZakat.setInputZmal10(Double.parseDouble(txtInputZmal10.getText()));
         mZakat.setInputNmal1(Double.parseDouble(txtInputNmal1.getText()));
         
+        //memanggil fungsi hitung jumlah harta dan zakat dengan mengirimkan data berupa model
         mController.hitungJumlahHarta(mZakat);
     }//GEN-LAST:event_btnHitungActionPerformed
 
